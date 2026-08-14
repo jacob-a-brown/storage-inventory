@@ -19,7 +19,7 @@ source venv/bin/activate
 on macOS or
 
 ```bash
-source  venv/Script/activate
+source  venv/Scripts/activate
 ```
 
 on Windows.
