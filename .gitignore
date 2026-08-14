@@ -1,0 +1,7 @@
+# ENVIRONMENT FILE
+.env
+backend/.env
+
+# VIRTUAL ENVNIRONMENT
+venv
+backend/venv
