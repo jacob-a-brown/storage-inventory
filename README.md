@@ -18,7 +18,7 @@ source/bin/activate
 
 ## Dependencies
 
-To install dependencies run
+Requires `Python 3.14.2`. To install dependencies run
 
 ```bash
 pip install -r requirements.txt
