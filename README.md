@@ -10,11 +10,19 @@ To set up a virtual environment run
 python -m venv venv
 ```
 
-To enter the virtual environemtn run
+To enter the virtual environment run
 
 ```bash
-source/bin/activate
+source venv/bin/activate
 ```
+
+on macOS or
+
+```bash
+source  venv/Script/activate
+```
+
+on Windows.
 
 ## Dependencies
 
