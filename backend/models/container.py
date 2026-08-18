@@ -1,15 +1,7 @@
 from utils.db import Base
-from sqlalchemy import (
-    Column,
-    UUID,
-    String,
-    Float,
-    Boolean,
-    ForeignKey,
-    Mapped,
-    mapped_column,
-    relationship
-)
+from sqlalchemy import (ForeignKey, String)
+from sqlalchemy.orm import (Mapped, mapped_column, relationship)
+
 
 class Container(Base):
     __tablename__ = "containers"
