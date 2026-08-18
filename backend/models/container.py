@@ -10,5 +10,7 @@ class Container(Base):
     name: Mapped[str] = mapped_column(String(30))
     type: Mapped[str] = mapped_column(String(30))
     parent_id: Mapped[int | None] = mapped_column(ForeignKey("containers.id"), nullable=True)
+    
     parent: Mapped["Container | None"] = relationship("Container", back_populates="children", remote_side=[id])
     children: Mapped[list["Container"]] = relationship("Container", back_populates="parent")
+    items: Mapped[list["Item"]] = relationship("Item", back_populates="container")
