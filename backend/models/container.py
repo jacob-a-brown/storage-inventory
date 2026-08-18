@@ -7,7 +7,8 @@ from sqlalchemy import (
     Boolean,
     ForeignKey,
     Mapped,
-    mapped_column
+    mapped_column,
+    relationship
 )
 
 class Container(Base):
@@ -16,3 +17,6 @@ class Container(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     name: Mapped[str] = mapped_column(String(30))
     type: Mapped[str] = mapped_column(String(30))
+    parent_id: Mapped[int | None] = mapped_column(ForeignKey("containers.id"), nullable=True)
+    parent: Mapped["Container | None"] = relationship("Container", back_populates="children", remote_side=[id])
+    children: Mapped[list["Container"]] = relationship("Container", back_populates="parent")
